@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Світло — графік відключень світла</title>
+<meta name="description" content="Розширення Chrome: графік відключень світла для ваших адрес, стан на значку браузера та нагадування перед відключенням.">
+<link rel="icon" href="icon128.png">
+<style>
+  :root { --bg:#0b0f17; --raised:#151a24; --line:#242b38; --text:#f5f5f7; --dim:#a9b0bd; --accent:#4d9fff; --on:#4caf50; --off:#ef5350; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.6 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:960px; margin:0 auto; padding:0 20px; }
+  header { padding:72px 0 40px; text-align:center; }
+  .logo { width:72px; height:72px; border-radius:18px; }
+  h1 { font-size:40px; line-height:1.15; margin:20px 0 12px; letter-spacing:-.5px; }
+  .lead { font-size:19px; color:var(--dim); margin:0 auto; max-width:620px; }
+  .cta { display:inline-block; margin-top:28px; background:var(--accent); color:#fff;
+    text-decoration:none; font-weight:650; padding:14px 26px; border-radius:12px; }
+  .cta.is-soon { background:var(--raised); color:var(--dim); border:1px solid var(--line); }
+  .shots { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; padding:16px 0 8px; }
+  .shots img { width:100%; border-radius:12px; border:1px solid var(--line); display:block; }
+  section { padding:36px 0; border-top:1px solid var(--line); }
+  h2 { font-size:22px; margin:0 0 14px; }
+  ul { margin:0; padding-left:20px; color:var(--dim); }
+  li { margin:7px 0; }
+  li b { color:var(--text); font-weight:650; }
+  .note { color:var(--dim); font-size:14px; }
+  footer { padding:28px 0 60px; color:var(--dim); font-size:14px; display:flex; gap:18px; flex-wrap:wrap; }
+  footer a { color:var(--accent); }
+  @media (max-width:640px){ h1{font-size:30px} header{padding:48px 0 28px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img class="logo" src="icon128.png" alt="">
+    <h1>Знати, коли зникне світло</h1>
+    <p class="lead">Розширення для Chrome: стан вашої черги просто на панелі браузера,
+      час наступного перемикання та нагадування заздалегідь.</p>
+    <a class="cta is-soon" href="#" id="store">Незабаром у Chrome Web Store</a>
+  </header>
+
+  <div class="shots">
+    <img src="1-list.png" alt="Список адрес зі станом кожної">
+    <img src="2-day.png" alt="Графік на день, година за годиною">
+    <img src="3-stats.png" alt="Статистика годин без світла">
+    <img src="4-reminders.png" alt="Налаштування нагадувань">
+  </div>
+
+  <section>
+    <h2>Що воно робить</h2>
+    <ul>
+      <li><b>Значок показує стан</b> вашої основної черги: зелений, помаранчевий, червоний або сірий — і час до наступного перемикання.</li>
+      <li><b>Кілька адрес</b> — дім, робота, батьки. Для кожної видно, що буде далі.</li>
+      <li><b>Сьогодні та завтра</b> — увесь день, година за годиною.</li>
+      <li><b>Нагадування</b> перед відключенням і перед увімкненням, за скільки хвилин — обираєте ви. Окрему адресу можна приглушити.</li>
+      <li><b>Статистика</b> за 7, 30 чи 90 днів: скільки годин без світла, з графіком по днях.</li>
+      <li><b>Чесність:</b> якщо графіку немає або оператор перейшов на екстрені відключення — розширення так і каже, а не вигадує час.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Звідки дані</h2>
+    <p class="note">Графіки беруться з публічного сайту
+      <a href="https://bezsvitla.com.ua" rel="noopener">bezsvitla.com.ua</a>.
+      Розширення не пов'язане з цим сайтом, ДТЕК чи обленерго і не є їхнім офіційним застосунком.</p>
+  </section>
+
+  <section>
+    <h2>Приватність</h2>
+    <p class="note">Адреси, налаштування та збережені графіки лишаються у вашому браузері.
+      Жодної аналітики, жодних трекерів, жодних облікових записів.
+      <a href="privacy.html">Повна політика приватності</a>.</p>
+  </section>
+
+  <section>
+    <h2>In English</h2>
+    <p class="note">Svitlo is a Chrome extension showing Ukrainian power-outage schedules for
+      the addresses you save: live state on the toolbar icon, the time of the next switch,
+      reminders ahead of it, and statistics on hours without power. Free, no ads, no accounts.
+      Schedules come from the public site bezsvitla.com.ua; the extension is not affiliated
+      with it or with any power operator.</p>
+  </section>
+
+  <footer>
+    <a href="privacy.html">Політика приватності</a>
+    <a href="mailto:easelife.extension@gmail.com">easelife.extension@gmail.com</a>
+  </footer>
+</div>
+</body>
+</html>
